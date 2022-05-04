@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+:root {
+  /* ## Colors */
+
+  /* ### Neutral */
+
+  --almostWhite: hsl(0, 0%, 98%);
+  --mediumGray: hsl(0, 0%, 41%);
+  --almostBlack: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+
+body {
+    background: var(--almostWhite);
+}
+
+/* HEADER SECTION START */
+
+.header {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}
+
+.navBar {
+    padding: 0 3rem;
+    width: 60%;
+    position: relative;
+    display: flex;
+}
+
+.logoContent{
+    align-self: flex-end;
+}
+
+.navBar a {
+    color: var(--mediumGray);
+    text-decoration: none;
+    margin-right: 2rem;
+    font-weight: 500;
+    position: relative;
+    align-self: center;
+}
+
+.navBar a:hover{
+    color: var(--almostBlack);
+}
+
+
+.logBtns {
+    align-self: flex-start;
+    text-align: right;
+    width: 40%;
+    
+    
+}
+
+.logBtns .loginBtn{
+    border: none;
+    background: var(--almostWhite);
+    padding: 0.5rem 1rem;
+    color: var(--mediumGray);
+    font-weight: 500;
+    margin-right: 2rem;
+}
+
+.logBtns .loginBtn:hover{
+    color: var(--almostBlack);
+    cursor: pointer;
+}
+
+.logBtns .registerBtn{
+    border: solid 2px var(--mediumGray);
+    border-radius: 12px;
+    background: var(--almostWhite);
+    padding: 1rem;
+    color: var(--mediumGray);
+    font-weight: 500;
+    margin-right: 2rem;
+}
+
+.logBtns .registerBtn:hover{
+    color: var(--almostBlack);
+    cursor: pointer;
+    border: solid 2px var(--almostBlack);
+}
+
+
+
+.featuresMenu a {
+    margin-bottom: 0.5rem;
+    margin: 0.5rem auto ;
+    padding: 0 1rem;
+}
+
+.featuresMenu a svg {
+    margin: auto;
+}
+
+.featuresMenu a:hover {
+    cursor: pointer;
+}
+
+.companyMenu{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: var(--almostWhite);
+    box-shadow: 0px 0px 15px  hsl(0, 0%, 70%);
+    border-radius: 15px;
+    top: 2.5rem;
+    left: 9rem;
+    padding: 1rem;
+}
+
+.companyMenu a{
+    margin-bottom: 0.5rem;
+}
+
+/* Hide menus */
+.featuresMenu {
+    visibility:hidden ;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 1rem;
+    background: var(--almostWhite);
+    box-shadow: 0px 0px 15px  hsl(0, 0%, 70%);
+    border-radius: 15px;
+    left: -3rem;
+    top: 2.5rem;
+}
+
+.menuIcon {
+    visibility: hidden;
+}
+
+/* HEADER SECTION END */
+
+
+
+/* MAIN SECTION START */
+
+.mainContainer{
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+    min-height: 90vh;
+
+}
+
+.mainContainer .textContainer {
+    width: 50%;
+    align-self: center;
+    padding: 0 2rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContainer .textContainer h1{
+    font-size: 5rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+
+}
+
+.mainContainer .textContainer p{
+    font-size: 18px;
+    color: var(--mediumGray);
+    margin-left: 2rem;
+    line-height: 2rem;
+    width: 80%;
+    margin-bottom: 3rem;
+
+}
+
+.mainContainer .textContainer button{
+    border: none;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    color: var(--almostWhite);
+    background: var(--almostBlack);
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    width: 10rem;
+
+}
+
+.mainContainer .textContainer button:hover{
+    color: var(--almostBlack);
+    background: var(--almostWhite);
+    border: solid 1px var(--almostBlack);
+    cursor: pointer;
+}
+
+.mainContainer .textContainer .clientContainer {
+    margin-left: 2rem;
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.mainContainer .imgContainer{
+    width: 50%;
+    background: url(images/image-hero-desktop.png) no-repeat;
+    background-size: contain;
+}
+
+.featuresMenuMobile{
+    display: none;
+}
+.companyMenuMobile{
+    display: none;
+}
+.show{
+    display: none;
+}
+
+
+/* Responsibe */
+
+@media (max-width: 900px) {
+
+    .header{
+        margin: 1rem 0;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        box-shadow: 50px 50px 50px  hsl(0, 0%, 70%);
+        width: 70vw;
+        height: 100vh;
+        right: -100%;
+        top: 0;
+        font-size: 1.3rem;
+        padding: 1rem;
+        z-index: 0.5;
+        transition: 0.5s;
+        
+    }
+
+    .navBar a {
+        margin-top: 1rem;
+    }
+
+    .navBar.active{
+        right: 0;
+    }
+
+
+    .logBtns {
+        display: none;
+    }
+
+    .menuIcon {
+        visibility: visible;
+        position: absolute;
+        right: 5%;
+    }
+
+    .mainContainer{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+        max-height: 100vh;
+        justify-content: center;
+    }
+
+    .mainContainer .imgContainer{
+        width: 100%;
+        background: url(images/image-hero-mobile.png) no-repeat top center / contain; 
+        aspect-ratio: 1.2;
+
+    }
+
+    .mainContainer .textContainer {
+        width: 100%;
+        align-self: center;
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .mainContainer .textContainer h1{
+        font-size: 2rem;
+        margin: auto;
+    
+    }
+
+    .mainContainer .textContainer p{
+        font-size: 15px;
+        text-align: center;
+        margin: 1rem auto;
+        line-height: 1.5rem;
+        width: 100%;
+    }
+    
+    .mainContainer .textContainer button{
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .clientContainer {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem;
+    }
+    .featuresMenu{
+        display: none;
+    }
+    .companyMenu{
+        display: none;
+    }
+    .show{
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+    }
+
+}
